@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="tit1">Title anh 1</string>
+    <string name="artist1">Artist anh 1</string>
+    <string name="tit2">Title anh 2</string>
+    <string name="artist2">Artist anh 2</string>
+    <string name="tit3">Title anh 3</string>
+    <string name="artist3">Artist anh 3</string>
+    <string name="tit4">Title anh 4</string>
+    <string name="artist4">Artist anh 4</string>
+
+</resources>
