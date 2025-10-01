@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">My City - Hanoi</string>
+    <string name="back_button">Back</string>
+    <string name="list_fragment_label">Explore Hanoi</string>
+    <string name="detail_fragment_label">Place Details</string>
+
+    <!-- Categories -->
+    <string name="category_coffee">Coffee Shops</string>
+    <string name="category_restaurant">Restaurants</string>
+    <string name="category_kids">Kids Activities</string>
+    <string name="category_park">Parks</string>
+    <string name="category_mall">Shopping Malls</string>
+    <string name="category_subtitle">Discover the best places</string>
+
+    <!-- Coffee Shops -->
+    <string name="cafe_the_coffee_house">The Coffee House</string>
+    <string name="cafe_the_coffee_house_short">Popular Vietnamese coffee chain with modern atmosphere</string>
+    <string name="cafe_the_coffee_house_details">The Coffee House is one of Vietnam\'s most popular coffee chains, offering a wide variety of Vietnamese coffee drinks and Western-style beverages. With multiple locations throughout Hanoi, it provides a comfortable space for work, study, or casual meetings. The menu includes traditional Vietnamese coffee, innovative fusion drinks, and light snacks. Free WiFi and air conditioning make it a favorite spot for locals and tourists alike. Opening hours: 7:00 AM - 11:00 PM daily.</string>
+
+    <string name="cafe_tranquil_books">Tranquil Books &amp; Coffee</string>
+    <string name="cafe_tranquil_books_short">Quiet bookstore cafe perfect for reading and relaxation</string>
+    <string name="cafe_tranquil_books_details">Hidden in a quiet alley near Hoan Kiem Lake, Tranquil Books &amp; Coffee combines a bookstore with a peaceful cafe atmosphere. This three-story venue offers thousands of books in Vietnamese and English, comfortable seating areas, and excellent coffee. The rooftop terrace provides a serene escape from the busy streets below. Known for their book clubs, poetry readings, and quiet study spaces. They serve specialty coffee, herbal teas, and homemade cakes. Opening hours: 8:00 AM - 10:00 PM daily.</string>
+
+    <string name="cafe_giang">Cafe Giang</string>
+    <string name="cafe_giang_short">Home of the original Vietnamese egg coffee since 1946</string>
+    <string name="cafe_giang_details">Cafe Giang is a Hanoi institution, famous for inventing egg coffee (ca phe trung) in 1946. Located in a narrow alley in the Old Quarter, this humble cafe attracts coffee enthusiasts from around the world. The signature egg coffee features a creamy, meringue-like topping made from egg yolk, sugar, and condensed milk, served over strong Vietnamese coffee. The family-run business maintains the original recipe and traditional preparation methods. Despite its fame, prices remain reasonable and the atmosphere authentic. Opening hours: 7:00 AM - 10:00 PM daily.</string>
+
+    <!-- Restaurants -->
+    <string name="restaurant_quan_an_ngon">Quan An Ngon</string>
+    <string name="restaurant_quan_an_ngon_short">Vietnamese street food in a comfortable restaurant setting</string>
+    <string name="restaurant_quan_an_ngon_details">Quan An Ngon brings together the best of Vietnamese street food under one roof. Located in a beautiful French colonial villa, the restaurant features food stalls around an open courtyard where chefs prepare dishes from different regions of Vietnam. The extensive menu includes pho, bun cha, banh xeo, and hundreds of other traditional dishes. Perfect for those who want to try authentic street food in a clean, comfortable environment. The restaurant is popular with both locals and tourists, especially during lunch and dinner hours. Opening hours: 7:00 AM - 10:30 PM daily.</string>
+
+    <string name="restaurant_bun_cha_huong_lien">Bun Cha Huong Lien</string>
+    <string name="restaurant_bun_cha_huong_lien_short">Famous bun cha restaurant visited by President Obama</string>
+    <string name="restaurant_bun_cha_huong_lien_details">Bun Cha Huong Lien gained international fame when President Obama dined here with Anthony Bourdain in 2016. The restaurant serves Hanoi\'s signature dish: grilled pork patties and belly in a sweet and sour fish sauce broth, served with rice noodles and fresh herbs. The \"Obama Combo\" includes bun cha, nem (spring rolls), and Hanoi beer. Despite its fame, the restaurant maintains reasonable prices and authentic flavors. The second floor features the preserved table where Obama sat. Expect crowds during peak hours. Opening hours: 8:00 AM - 9:00 PM daily.</string>
+
+    <string name="restaurant_pizza_4ps">Pizza 4P\'s</string>
+    <string name="restaurant_pizza_4ps_short">Gourmet pizzas with Japanese-Italian fusion and local ingredients</string>
+    <string name="restaurant_pizza_4ps_details">Pizza 4P\'s offers a unique dining experience combining Italian pizza-making traditions with Japanese attention to detail and Vietnamese ingredients. The restaurant makes their own cheese daily at their farm in Da Lat. Popular pizzas include the signature burrata with parma ham and the Vietnamese-inspired banh mi pizza. The modern, stylish interior and open kitchen create a lively atmosphere. They also offer excellent pasta, salads, and desserts. Reservations recommended for dinner. Multiple locations in Hanoi. Opening hours: 10:00 AM - 10:00 PM daily.</string>
+
+    <!-- Kids Activities -->
+    <string name="kids_kizciti">KizCiti</string>
+    <string name="kids_kizciti_short">Educational role-play city for children aged 4-15</string>
+    <string name="kids_kizciti_details">KizCiti is an edutainment center where children can role-play various professions in a miniature city setting. Covering 4,000 square meters, it features over 60 professions including doctor, firefighter, chef, pilot, and TV presenter. Children earn KizCiti money by working and can spend it on activities or save it in the KizCiti bank. The facility provides costumes and equipment for each profession. Educational programs teach life skills, financial literacy, and career awareness. Suitable for children 4-15 years old. Parents can observe from viewing areas or the on-site cafe. Opening hours: 9:00 AM - 7:00 PM daily.</string>
+
+    <string name="kids_times_city_vinke">VinKE Times City</string>
+    <string name="kids_times_city_vinke_short">Indoor amusement park with games and rides for all ages</string>
+    <string name="kids_times_city_vinke_details">VinKE Times City is a massive indoor entertainment complex perfect for family fun regardless of weather. The facility features arcade games, 4D cinema, bowling, karaoke, bumper cars, and various rides suitable for different age groups. The Kids Zone includes soft play areas, ball pits, and educational games for younger children. Teenagers enjoy the virtual reality experiences, laser tag, and climbing walls. Food court offers various dining options. Located in the basement of Vincom Mega Mall Times City. Birthday party packages available. Opening hours: 10:00 AM - 10:00 PM weekdays, 9:00 AM - 10:30 PM weekends.</string>
+
+    <string name="kids_ho_tay_waterpark">Ho Tay Water Park</string>
+    <string name="kids_ho_tay_waterpark_short">Largest water park in Hanoi with pools and slides</string>
+    <string name="kids_ho_tay_waterpark_details">Ho Tay Water Park offers refreshing fun during Hanoi\'s hot summer months. Located on the shores of West Lake, it features multiple swimming pools, water slides of varying heights and speeds, a lazy river, and a dedicated children\'s area with shallow pools and mini slides. The wave pool creates artificial waves every 30 minutes. Facilities include changing rooms, lockers, sun loungers, and umbrellas. Several food stalls and restaurants on-site. Lifeguards on duty at all pools. Best visited on weekdays to avoid crowds. Opening hours: 8:30 AM - 6:00 PM (May to September), weekends only in shoulder seasons.</string>
+
+    <!-- Parks -->
+    <string name="park_thong_nhat">Thong Nhat Park (Lenin Park)</string>
+    <string name="park_thong_nhat_short">Large urban park with lake, gardens, and recreational facilities</string>
+    <string name="park_thong_nhat_details">Thong Nhat Park, also known as Lenin Park, is one of Hanoi\'s largest green spaces covering 50 hectares. The park features Bay Mau Lake where visitors can rent swan boats, multiple playgrounds, exercise equipment, and walking paths shaded by mature trees. Early mornings see locals practicing tai chi, aerobics, and ballroom dancing. The park hosts cultural events, concerts, and festivals throughout the year. Children enjoy the small amusement park with rides and games. Multiple cafes and food vendors throughout the park. Free entry. Opening hours: 5:00 AM - 10:00 PM daily.</string>
+
+    <string name="park_hoa_binh">Hoa Binh Park</string>
+    <string name="park_hoa_binh_short">Family-friendly park with modern playground and sports facilities</string>
+    <string name="park_hoa_binh_details">Hoa Binh Park offers a perfect blend of nature and modern recreational facilities. The recently renovated park features one of Hanoi\'s best children\'s playgrounds with equipment suitable for different age groups. Sports facilities include basketball courts, badminton courts, and outdoor gym equipment. The central pond attracts many birds, making it popular with nature photographers. Wide paths accommodate joggers, cyclists, and rollerbladers. The park\'s amphitheater hosts weekend performances and movie screenings. Several coffee shops and restaurants border the park. Free entry. Opening hours: 5:00 AM - 11:00 PM daily.</string>
+
+    <string name="park_bach_thao">Bach Thao Botanical Garden</string>
+    <string name="park_bach_thao_short">Historic botanical garden with diverse plant species and peaceful paths</string>
+    <string name="park_bach_thao_details">Bach Thao Botanical Garden, established in 1890, is Hanoi\'s oldest park and a peaceful oasis in the city center. The 10-hectare garden features over 1,000 plant species including rare orchids, ancient trees, and medicinal plants. Winding paths lead through themed sections including the palm garden, bamboo grove, and orchid house. The park includes several sculptures, a small lake with bridges, and historic French colonial structures. Popular with photographers, artists, and anyone seeking tranquility. Educational programs for school groups available. Small entrance fee required. Opening hours: 7:30 AM - 9:00 PM daily.</string>
+
+    <!-- Shopping Malls -->
+    <string name="mall_vincom">Vincom Center Ba Trieu</string>
+    <string name="mall_vincom_short">Premium shopping mall with international brands and entertainment</string>
+    <string name="mall_vincom_details">Vincom Center Ba Trieu is one of Hanoi\'s premier shopping destinations, featuring six floors of retail, dining, and entertainment. The mall houses international fashion brands like Zara, H&amp;M, and Uniqlo, alongside Vietnamese designers and luxury boutiques. The top floors feature a modern cinema complex, kids\' play area, and arcade. The basement food court offers diverse cuisine options from Vietnamese street food to international chains. Regular fashion shows and promotional events. Connected directly to Vincom Tower with additional office and residential facilities. Convenient downtown location with parking available. Opening hours: 9:30 AM - 10:00 PM daily.</string>
+
+    <string name="mall_lotte">Lotte Center Hanoi</string>
+    <string name="mall_lotte_short">Luxury mall in iconic skyscraper with observation deck and premium shopping</string>
+    <string name="mall_lotte_details">Located in Hanoi\'s second-tallest building, Lotte Center combines luxury shopping with spectacular city views. The mall occupies the lower floors of the 65-story tower, featuring high-end brands, a Lotte Department Store, and a large supermarket. The observation deck on the 65th floor offers 360-degree views of Hanoi. Dining options range from food court to fine dining restaurants, including several with skyline views. The complex includes a cinema, fitness center, and cultural center hosting exhibitions. The building\'s distinctive design has become a Hanoi landmark. Valet parking available. Opening hours: 9:30 AM - 10:00 PM daily, observation deck until 11:00 PM.</string>
+
+    <string name="mall_aeon">AEON Mall Long Bien</string>
+    <string name="mall_aeon_short">Japan\'s largest mall chain featuring shopping, dining, and family entertainment</string>
+    <string name="mall_aeon_details">AEON Mall Long Bien brings Japanese retail concepts to Hanoi with a focus on family-friendly shopping and entertainment. The massive complex features AEON department store, supermarket with imported Japanese products, and over 150 specialty shops. The Kids Republic area includes indoor playground, arcade, and educational activities. Food options include Japanese restaurants, Vietnamese cuisine, and international fast food. The mall hosts regular cultural events, promotional campaigns, and seasonal decorations. Free shuttle buses from various points in Hanoi. Ample free parking. Known for cleanliness and customer service. Opening hours: 9:00 AM - 10:00 PM daily, supermarket opens at 8:00 AM.</string>
+
+    <!-- Additional UI strings -->
+    <string name="loading">Loading…</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="try_again">Try Again</string>
+    <string name="no_places_found">No places found for this category</string>
+    <string name="explore_button">Explore</string>
+    <string name="see_details">See Details</string>
+    <string name="share">Share</string>
+    <string name="favorites">Favorites</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+</resources>
