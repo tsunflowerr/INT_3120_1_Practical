@@ -14,13 +14,19 @@
  * limitations under the License.
  */
 
-package com.example.bluromatic.data
-
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.Flow
-
-interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo>
-    fun applyBlur(blurLevel: Int)
-    fun cancelWork()
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Water Me"
+include(":app")

@@ -14,13 +14,19 @@
  * limitations under the License.
  */
 
-package com.example.bluromatic.data
+package com.example.waterme.model
 
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.Flow
+import android.os.Parcelable
+import androidx.annotation.StringRes
+import kotlinx.parcelize.Parcelize
 
-interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo>
-    fun applyBlur(blurLevel: Int)
-    fun cancelWork()
-}
+/**
+ * Data class for representing the information required for each plant card.
+ * */
+@Parcelize
+data class Plant(
+    @StringRes val name: Int,
+    @StringRes val type: Int,
+    @StringRes val description: Int,
+    @StringRes val schedule: Int
+): Parcelable

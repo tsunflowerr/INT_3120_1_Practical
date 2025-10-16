@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-package com.example.bluromatic.data
+package com.example.waterme.data
 
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.Flow
+import androidx.annotation.StringRes
+import java.util.concurrent.TimeUnit
 
-interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo>
-    fun applyBlur(blurLevel: Int)
-    fun cancelWork()
-}
+/**
+ * Data class for representing the information required for reminder dialogs items.
+ * */
+data class Reminder(
+    @StringRes val durationRes: Int,
+    val duration: Long,
+    val unit: TimeUnit,
+    val plantName: String
+)

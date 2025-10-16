@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.bluromatic.data
+package com.example.waterme.data
 
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.Flow
+import android.content.Context
 
-interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo>
-    fun applyBlur(blurLevel: Int)
-    fun cancelWork()
+interface AppContainer {
+    val waterRepository : WaterRepository
+}
+
+class DefaultAppContainer(context: Context) : AppContainer {
+    override val waterRepository = WorkManagerWaterRepository(context)
 }

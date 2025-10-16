@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package com.example.bluromatic.data
+package com.example.waterme.data
 
-import androidx.work.WorkInfo
-import kotlinx.coroutines.flow.Flow
+import com.example.waterme.model.Plant
+import java.util.concurrent.TimeUnit
 
-interface BluromaticRepository {
-    val outputWorkInfo: Flow<WorkInfo>
-    fun applyBlur(blurLevel: Int)
-    fun cancelWork()
+interface WaterRepository {
+    fun scheduleReminder(duration: Long, unit: TimeUnit, plantName: String)
+    val plants: List<Plant>
 }
