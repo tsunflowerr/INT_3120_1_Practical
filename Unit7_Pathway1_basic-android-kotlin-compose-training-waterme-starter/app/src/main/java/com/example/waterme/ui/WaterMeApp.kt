@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2023 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.example.waterme.ui
 
 import androidx.compose.foundation.clickable
@@ -50,20 +34,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.waterme.ui.theme.WaterMeTheme
 import com.example.waterme.FIVE_SECONDS
+import com.example.waterme.ONE_DAY
 import com.example.waterme.R
+import com.example.waterme.SEVEN_DAYS
+import com.example.waterme.THIRTY_DAYS
 import com.example.waterme.data.DataSource
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.waterme.ONE_MINUTE
-import com.example.waterme.THREE_MINUTES
-import com.example.waterme.TWO_MINUTES
+import com.example.unit7_pathway1_waterme_app.ui.theme.Unit7_Pathway1_WaterMe_AppTheme
 import java.util.concurrent.TimeUnit
 
 @Composable
 fun WaterMeApp(waterViewModel: WaterViewModel = viewModel(factory = WaterViewModel.Factory)) {
     val layoutDirection = LocalLayoutDirection.current
-    WaterMeTheme {
+    Unit7_Pathway1_WaterMe_AppTheme {
         Surface(
             modifier = Modifier
                 .fillMaxSize()
@@ -153,9 +137,9 @@ fun ReminderDialogContent(
 ) {
     val reminders = listOf(
         Reminder(R.string.five_seconds, FIVE_SECONDS, TimeUnit.SECONDS, plantName),
-        Reminder(R.string.one_minute, ONE_MINUTE, TimeUnit.MINUTES, plantName),
-        Reminder(R.string.two_minutes, TWO_MINUTES, TimeUnit.MINUTES, plantName),
-        Reminder(R.string.three_minutes, THREE_MINUTES, TimeUnit.MINUTES, plantName)
+        Reminder(R.string.one_day, ONE_DAY, TimeUnit.DAYS, plantName),
+        Reminder(R.string.one_week, SEVEN_DAYS, TimeUnit.DAYS, plantName),
+        Reminder(R.string.one_month, THIRTY_DAYS, TimeUnit.DAYS, plantName)
     )
 
     AlertDialog(
@@ -185,7 +169,7 @@ fun ReminderDialogContent(
 @Preview(showBackground = true)
 @Composable
 fun PlantListItemPreview() {
-    WaterMeTheme {
+    Unit7_Pathway1_WaterMe_AppTheme {
         PlantListItem(DataSource.plants[0], {})
     }
 }

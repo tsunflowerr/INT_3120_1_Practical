@@ -38,4 +38,7 @@ interface JuiceDao {
 
     @Update
     suspend fun update(juice: Juice)
+
+    @Query("DELETE FROM juice WHERE id IN (:ids)")
+    suspend fun deleteJuices(ids: Set<Long>)
 }

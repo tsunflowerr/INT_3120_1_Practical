@@ -30,29 +30,29 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.juicetracker.R
 import com.example.juicetracker.ui.bottomsheet.EntryBottomSheet
 import com.example.juicetracker.ui.homescreen.AdBanner
 import com.example.juicetracker.ui.homescreen.JuiceTrackerFAB
 import com.example.juicetracker.ui.homescreen.JuiceTrackerList
 import com.example.juicetracker.ui.homescreen.JuiceTrackerTopAppBar
 import kotlinx.coroutines.launch
-import com.example.juicetracker.R
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun JuiceTrackerApp(
     modifier: Modifier = Modifier,
     juiceTrackerViewModel: JuiceTrackerViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
-
     val bottomSheetScaffoldState = rememberBottomSheetScaffoldState(
         bottomSheetState = rememberStandardBottomSheetState(
             initialValue = SheetValue.Hidden,
             skipHiddenState = false,
         )
     )
-
     val scope = rememberCoroutineScope()
     val trackerState by juiceTrackerViewModel.juiceListStream.collectAsState(emptyList())
+    val selectedJuices by juiceTrackerViewModel.selectedJuices.collectAsState()
 
     EntryBottomSheet(
         juiceTrackerViewModel = juiceTrackerViewModel,
@@ -69,11 +69,14 @@ fun JuiceTrackerApp(
                 bottomSheetScaffoldState.bottomSheetState.hide()
             }
         }
-    )
-    {
+    ) {
         Scaffold(
             topBar = {
-                JuiceTrackerTopAppBar()
+                JuiceTrackerTopAppBar(
+                    count = selectedJuices.size,
+                    onDelete = { juiceTrackerViewModel.deleteSelectedJuices() },
+                    onCancel = { juiceTrackerViewModel.clearSelection() }
+                )
             },
             floatingActionButton = {
                 JuiceTrackerFAB(
@@ -95,13 +98,16 @@ fun JuiceTrackerApp(
                 )
                 JuiceTrackerList(
                     juices = trackerState,
-                    onDelete = { juice -> juiceTrackerViewModel.deleteJuice(juice) },
                     onUpdate = { juice ->
                         juiceTrackerViewModel.updateCurrentJuice(juice)
                         scope.launch {
                             bottomSheetScaffoldState.bottomSheetState.expand()
                         }
                     },
+                    onJuiceSelected = { juice, selected ->
+                        juiceTrackerViewModel.toggleJuiceSelection(juice, selected)
+                    },
+                    selectedIds = selectedJuices
                 )
             }
         }

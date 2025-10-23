@@ -35,6 +35,26 @@ class JuiceTrackerViewModel(private val juiceRepository: JuiceRepository) : View
     val currentJuiceStream: StateFlow<Juice> = _currentJuiceStream
     val juiceListStream: Flow<List<Juice>> = juiceRepository.juiceStream
 
+    private val _selectedJuices = MutableStateFlow(emptySet<Long>())
+    val selectedJuices: StateFlow<Set<Long>> = _selectedJuices
+
+    fun toggleJuiceSelection(juice: Juice, selected: Boolean) {
+        _selectedJuices.update { currentSelection ->
+            if (selected) {
+                currentSelection + juice.id
+            } else {
+                currentSelection - juice.id
+            }
+        }
+    }
+
+    fun clearSelection() = _selectedJuices.update { emptySet() }
+
+    fun deleteSelectedJuices() = viewModelScope.launch {
+        juiceRepository.deleteJuices(selectedJuices.value)
+        clearSelection()
+    }
+
     fun resetCurrentJuice() = _currentJuiceStream.update { emptyJuice }
     fun updateCurrentJuice(juice: Juice) = _currentJuiceStream.update { juice }
 

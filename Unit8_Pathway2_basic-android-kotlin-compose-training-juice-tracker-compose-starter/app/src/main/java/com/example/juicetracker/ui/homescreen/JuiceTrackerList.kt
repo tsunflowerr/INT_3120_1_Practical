@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -42,16 +43,22 @@ import com.example.juicetracker.data.Juice
 @Composable
 fun JuiceTrackerList(
     juices: List<Juice>,
-    onDelete: (Juice) -> Unit,
     onUpdate: (Juice) -> Unit,
+    onJuiceSelected: (Juice, Boolean) -> Unit,
+    selectedIds: Set<Long>,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(vertical = 8.dp),
     ) {
-        items(items = juices) { juice ->
-            JuiceTrackerListItem(juice, onDelete, onUpdate)
+        items(items = juices, key = { it.id }) { juice ->
+            JuiceTrackerListItem(
+                juice = juice,
+                onUpdate = onUpdate,
+                isSelected = selectedIds.contains(juice.id),
+                onJuiceSelected = { selected -> onJuiceSelected(juice, selected) }
+            )
         }
     }
 }
@@ -59,8 +66,9 @@ fun JuiceTrackerList(
 @Composable
 fun JuiceTrackerListItem(
     juice: Juice,
-    onDelete: (Juice) -> Unit,
     onUpdate: (Juice) -> Unit,
+    isSelected: Boolean,
+    onJuiceSelected: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -70,16 +78,16 @@ fun JuiceTrackerListItem(
                 onUpdate(juice)
             }
             .padding(vertical = 8.dp, horizontal = 16.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
     ) {
+        Checkbox(
+            checked = isSelected,
+            onCheckedChange = onJuiceSelected,
+            modifier = Modifier.padding(end = 16.dp)
+        )
         JuiceIcon(juice.color)
         JuiceDetails(juice, modifier.weight(1f))
-        DeleteButton(
-            onDelete = {
-                onDelete(juice)
-            },
-            modifier = Modifier.align(Alignment.Top)
-        )
     }
 }
 
@@ -120,7 +128,9 @@ fun JuiceTrackerListPreview() {
                 Juice(4, "Celery", "Refreshing~", "Green", 1),
                 Juice(5, "ABC", "Refreshing~", "Red", 4)
             ),
-            onDelete = {},
-            onUpdate = {})
+            onUpdate = {},
+            onJuiceSelected = { _, _ -> },
+            selectedIds = setOf(1L, 3L)
+        )
     }
 }

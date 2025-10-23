@@ -15,9 +15,17 @@
  */
 package com.example.juicetracker.ui.homescreen
 
+import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -30,20 +38,43 @@ import com.example.juicetracker.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun JuiceTrackerTopAppBar(modifier: Modifier = Modifier) {
+fun JuiceTrackerTopAppBar(
+    count: Int,
+    onDelete: () -> Unit,
+    onCancel: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     CenterAlignedTopAppBar(
         modifier = modifier,
         colors = TopAppBarDefaults.largeTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.background
         ),
         title = {
-            Text(
-                text = stringResource(R.string.app_name),
-                modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_medium)),
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
+            if (count > 0) {
+                Text("$count selected")
+            } else {
+                Text(
+                    text = stringResource(R.string.app_name),
+                    modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_medium)),
+                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+            }
+        },
+        actions = {
+            Row(
+                Modifier.animateContentSize()
+            ) {
+                if (count > 0) {
+                    IconButton(onClick = onCancel) {
+                        Icon(Icons.Default.Clear, contentDescription = "Clear selection")
+                    }
+                    IconButton(onClick = onDelete) {
+                        Icon(Icons.Default.Delete, contentDescription = "Delete")
+                    }
+                }
+            }
         }
     )
 }
